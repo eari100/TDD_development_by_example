@@ -10,6 +10,7 @@ package com.example.tdd_development_by_example.domain;
 // hashcode
 // Equal null
 // Equal object
+// 5CHF x 2 = 10CHF
 public class Dollar {
 
     Dollar(int amount) {
