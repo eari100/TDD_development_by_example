@@ -6,12 +6,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class DollarTests {
 
-    // todo:
-    // $5 + 10CHF = $10 (환율이 2:1일 경우)
-    // [완료] $5 * 2 = $10
-    // amount를 private로 만들기
-    // [완료] Dollar side effect?
-    // Money 반올림?
     @Test
     public void testMultiplication() {
         Dollar five = new Dollar(5);
