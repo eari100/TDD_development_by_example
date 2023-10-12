@@ -8,6 +8,7 @@ public class Dollar {
 
     public int amount;
 
+    // 타락한 객체?
     Dollar times(int multiplier) {
         return new Dollar(amount * multiplier);
     }
