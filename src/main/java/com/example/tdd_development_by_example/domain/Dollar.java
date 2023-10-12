@@ -8,6 +8,8 @@ package com.example.tdd_development_by_example.domain;
 // Money 반올림?
 // [완료] equals
 // hashcode
+// Equal null
+// Equal object
 public class Dollar {
 
     Dollar(int amount) {
