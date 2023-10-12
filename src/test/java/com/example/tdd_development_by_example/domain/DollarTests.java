@@ -2,8 +2,7 @@ package com.example.tdd_development_by_example.domain;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class DollarTests {
 
@@ -25,5 +24,6 @@ public class DollarTests {
     @Test
     public void testEquality() {
         assertTrue(new Dollar(5).equals(new Dollar(5)));
+        assertFalse(new Dollar(5).equals(new Dollar(6)));
     }
 }
