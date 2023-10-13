@@ -13,7 +13,8 @@ package com.example.tdd_development_by_example.domain;
 // 5CHF x 2 = 10CHF
 // [완료] 공용 equals
 // 공용 times
-// Franc와 Dollar 비교하기
+// [완료] Franc와 Dollar 비교하기
+// 통화?
 public class Dollar extends Money {
 
     Dollar(int amount) {
