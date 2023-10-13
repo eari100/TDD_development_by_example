@@ -11,22 +11,17 @@ package com.example.tdd_development_by_example.domain;
 // Equal null
 // Equal object
 // 5CHF x 2 = 10CHF
-public class Dollar {
+// [완료] 공용 equals
+// 공용 times
+// Franc와 Dollar 비교하기
+public class Dollar extends Money {
 
     Dollar(int amount) {
         this.amount = amount;
     }
 
-    private int amount;
-
     // 타락한 객체?
     Dollar times(int multiplier) {
         return new Dollar(amount * multiplier);
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        Dollar dollar = (Dollar) obj;
-        return amount == dollar.amount;
     }
 }
