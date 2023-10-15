@@ -15,6 +15,7 @@ package com.example.tdd_development_by_example.domain;
 // 공용 times
 // [완료] Franc와 Dollar 비교하기
 // 통화?
+// testFrancMultiplication
 public class Dollar extends Money {
 
     Dollar(int amount) {

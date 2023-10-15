@@ -6,8 +6,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class FrancTests {
 
+    // 하위 클래스가 사라지면서 불필요해진 테스트
     @Test
-    public void testMultiplication() {
+    public void testFrancMultiplication() {
         Money five = Money.dollar(5);
         assertEquals(Money.dollar(10), five.times(2));
         assertEquals(Money.dollar(15), five.times(3));
