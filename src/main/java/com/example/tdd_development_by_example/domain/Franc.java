@@ -6,7 +6,7 @@ public class Franc extends Money {
         this.amount = amount;
     }
     // 타락한 객체?
-    Franc times(int multiplier) {
+    Money times(int multiplier) {
         return new Franc(amount * multiplier);
     }
 }

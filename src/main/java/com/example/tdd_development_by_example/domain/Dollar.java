@@ -22,7 +22,7 @@ public class Dollar extends Money {
     }
 
     // 타락한 객체?
-    Dollar times(int multiplier) {
+    Money times(int multiplier) {
         return new Dollar(amount * multiplier);
     }
 }
