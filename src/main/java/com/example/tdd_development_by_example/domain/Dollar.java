@@ -14,16 +14,15 @@ package com.example.tdd_development_by_example.domain;
 // [완료] 공용 equals
 // 공용 times
 // [완료] Franc와 Dollar 비교하기
-// 통화?
-// testFrancMultiplication
+// [완료] 통화?
+// testFrancMultiplication 제거
 public class Dollar extends Money {
-
-    Dollar(int amount) {
-        this.amount = amount;
+    Dollar(int amount, String currency) {
+        super(amount, currency);
     }
 
     // 타락한 객체?
     Money times(int multiplier) {
-        return new Dollar(amount * multiplier);
+        return Money.dollar(amount * multiplier);
     }
 }
