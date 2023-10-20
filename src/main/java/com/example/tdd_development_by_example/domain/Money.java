@@ -1,10 +1,12 @@
 package com.example.tdd_development_by_example.domain;
 
-public abstract class Money {
+public class Money {
     protected int amount;
     protected String currency;
 
-    abstract Money times(int multiplier);
+    Money times(int multiplier) {
+        return new Money(amount * multiplier, currency);
+    }
 
     Money(int amount, String currency) {
         this.amount = amount;
@@ -17,7 +19,7 @@ public abstract class Money {
 
     public boolean equals(Object obj) {
         Money money = (Money) obj;
-        return amount == money.amount && getClass().equals(money.getClass());
+        return amount == money.amount && currency().equals(money.currency);
     }
 
     static Dollar dollar(int amount) {
@@ -26,5 +28,9 @@ public abstract class Money {
 
     static Franc franc(int amount) {
         return new Franc(amount, "CHF");
+    }
+
+    public String toString() {
+        return amount + " " + currency;
     }
 }
