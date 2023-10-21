@@ -1,6 +1,8 @@
 package com.example.tdd_development_by_example.domain;
 
-public class Money {
+import com.example.tdd_development_by_example.util.Expression;
+
+public class Money implements Expression {
     protected int amount;
     protected String currency;
 
@@ -20,6 +22,10 @@ public class Money {
     public boolean equals(Object obj) {
         Money money = (Money) obj;
         return amount == money.amount && currency().equals(money.currency);
+    }
+
+    public Money plus(Money addend) {
+        return new Money(amount + addend.amount, currency);
     }
 
     static Money dollar(int amount) {
