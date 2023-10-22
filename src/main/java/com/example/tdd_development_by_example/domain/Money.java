@@ -24,8 +24,8 @@ public class Money implements Expression {
         return amount == money.amount && currency().equals(money.currency);
     }
 
-    public Money plus(Money addend) {
-        return new Money(amount + addend.amount, currency);
+    public Sum plus(Money addend) {
+        return new Sum(this, addend);
     }
 
     static Money dollar(int amount) {
@@ -34,6 +34,10 @@ public class Money implements Expression {
 
     static Money franc(int amount) {
         return new Money(amount, "CHF");
+    }
+
+    public Money reduce(String to) {
+        return this;
     }
 
     public String toString() {
